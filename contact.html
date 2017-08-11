@@ -33,102 +33,84 @@
 <script src="js/free_validation.js"></script>
 </head>
 <body>
-<div id="container">
-<div id="wrapper">
-	<div id="header_inner">
-		<div class="nav">
-		<ul>
-		<li><a class="nav" href="contact.html"><span>Contact</span></a></li>
-			<li><a class="nav" href="testimonial.html"><span>Testimonials</span></a></li>
-			<li><a class="nav" href="tips.html"><span>Maintenance Tips</span></a></li>
-			<li><a class="nav" href="services.html"><span>Services</span></a></li>
-			<li><a class="nav" href="index.html"><span>Home</span></a></li>
-		</ul>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-	<div id="content_inner">
-		<div id="inner_col_left">
-		<h4>Get In Touch with Us!</h4>
-			<div class="Gainesville">
+<main>
+<header class="header_inner">
+		<nav>
+			<ul class="no-bullet">
+			<li><a alt="main" href="index.html">Main</a>
+			</li><li><a alt="services" href="services.html">Services</a>
+			</li><li><a alt="tips" href="tips.html">Maintenance Tips</a>
+			</li><li><a alt="testimonial" href="testimonial.html">Testimonials</a>
+			</li><li><a alt="contact" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<h3 class="text-right">Gainesville - (352) 338-3600</h3>
+	</header>
+	<h1>Contact Us</h1>
+	<section>
+		<div class="col_one_half">
+		<h2>Gainesville - <strong>(352) 338-3600</strong></h2>
+			
 			<form name="contactformfree" method="post" action="free_process.php" onsubmit="return validate.check(this)">
-				<table width="400px">
-					<tr>
-						<td colspan="2"><p>Enter the detailed problem along with your contact information and receive a call back within the hour.</p></td>	
-					</tr>
-					<tr>
-						<td valign="top" class="Gainesville_td">
-						  <label for="Full_Name" class="required">Name</label>
-						</td>
-						<td valign="top" class="Gainesville_td">
-						  <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:300px">
-						</td>
-					</tr>
-					<tr>
-						<td valign="top" class="Gainesville_td">
-						<label for="Email_Address" class="required">Email</label>
-						</td>
-						<td valign="top" class="Gainesville_td">
-						<input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:300px">
-						</td>
-					</tr>
-					<tr>
-						<td valign="top" class="Gainesville_td">
-						<label for="Telephone_Number" class="required">Phone #</label>
-						</td>
-						<td valign="top" class="Gainesville_td">
-						<input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="80" style="width:300px">
-						</td>
-					</tr>
-					<tr>
-						<td valign="top" class="Gainesville_td">
-						<label for="Your_Message" class="required">Message</label>
-						</td>
-						<td valign="top" class="Gainesville_td">
-						<textarea style="width:300px;height:120px" name="Your_Message" id="Your_Message" maxlength="1000"></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" style="text-align:center"  class="Gainesville_td">
-						<input type="submit" value="Submit"><br /><br />
-						</td>
-					</tr>
-				</table>
+		
+					<p>Enter the detailed problem along with your contact information and receive a call back within the hour.</p>
+						
+					<label for="Full_Name" class="required">Full Name
+					<input type="text" name="Full_Name" id="Full_Name" maxlength="80" class="full_name"></label>
+			
+					<label for="Email_Address" class="required">Email Address
+					<input type="email" name="Email_Address" id="Email_Address" maxlength="100" class="email"></label>
+		
+					<label for="Telephone_Number" class="required">Phone Number
+					<input type="tel" name="Telephone_Number" id="Telephone_Number" maxlength="80" class="telephone"></label>
+
+					<label for="Your_Message" class="required">Message
+					<textarea name="Your_Message" id="Your_Message" maxlength="1000" class="message"></textarea></label>
+					
+					<input type="submit" value="Submit">
+	
 			</form>
-			</div>
+		
 		</div>
-		<div id="cont_col_right">
-		<h3>
-			<b>Gainesville</b> - (352) 338-3600<br/>
-			</h3>
+		<div class="col_one_half">
 		<img src="img/greenstove.png" alt="Same Day Appliance Repair Gainesville Ocala FL">
 	    </div>
-	</div>
-  <div class="clearfix"></div>
-<footer>
-<div id="footerline"></div>
-<div class="redwash"><img src="img/footerimg.png" alt="Appliance Repair Image"></div>
-<div id="numbers">
-<h3>
-<b>Gainesville</b> (352) 338-3600<br/></h3>
-</div>
-<ul>
-<li><a href="index.html" class="main">Main</a></li>
-<li><a href="services.html" class="services">Services</a></li>
-<li><a href="tips.html" class="tips">Tips</a></li>
-<li><a href="testimonial.html" class="testimonial">Testimonials</a></li>
-<li><a href="contact.html" class="contact">Contact</a></li>
-<li><a href=" http://www.facebook.com/pages/a-same-day-appliance-service-llc/368057089904663"><img src="img/sm_fb.png" alt="Same Day Appliance Repair on Facebook"></a></li>
-</ul>
-<div id="credit">
-<img src="img/cards.png" alt="We accept all major credit cards">
-</div>
-<div id="copyright">
-<span><a href="mailto:dustin@dustinaguilar.com">Site Feedback</a> Copyright 1999-2017</span><a href="http://www.dustinaguilar.com"><img src="img/watermark.png" title="Dustin Aguilar Web Development"></a>
-</div>
-</div>
-</footer>
-</div>
+	</section>
+   	<footer>
+		<hr>
+		<div class="right text-right">
+				<ul>
+			<li>
+				<a class="main" href="index.html">Main</a>
+			</li>
+			<li>
+				<a class="services" href="services.html">Services</a>
+			</li>
+			<li>
+				<a class="tips" href="tips.html">Tips</a>
+			</li>
+			<li>
+				<a class="testimonial" href="testimonial.html">Testimonials</a>
+			</li>
+			<li>
+				<a class="contact" href="contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="http://www.facebook.com/pages/a-same-day-appliance-service-llc/368057089904663"><img alt="Same Day Appliance Repair on Facebook" src="img/sm_fb.png"></a>
+			</li>
+		</ul>
+		Copyright 1999-2017 <br>
+			<!-- <a href="mailto:dustin@dustinaguilar.com">Site Feedback</a> --> <a href="http://www.dustinaguilar.com"><img src="img/watermark.png" title="Dustin Aguilar Web Development"></a>
+
+		</div>
+		<div class="redwash"><img alt="Appliance Repair Image" src="img/footerimg.png"></div>
+		<div class="footer-left-padding">
+			<h3><strong>Gainesville</strong> - (352) 338-3600</h3>
+				<img alt="We accept all major credit cards" src="img/cards.png"><br>
+		</div>
+		
+	</footer>
+</section>
 <script>
         var _gaq=[['_setAccount','UA-19260452-1'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

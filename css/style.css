@@ -1,3 +1,7 @@
+/* CSS by Dustin Aguilar - Last revised 8/11/2017 */
+
+/* PRINT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media print {
 * {
     background:transparent!important;
@@ -23,20 +27,6 @@ abbr[title]:after {
 .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
     content:""
 }
-
-pre,blockquote {
-    border:1px solid #999;
-    page-break-inside:avoid
-}
-
-thead {
-    display:table-header-group
-}
-
-tr,img {
-    page-break-inside:avoid
-}
-
 img {
     max-width:100%!important
 }
@@ -46,30 +36,22 @@ iframe,
 	width:100%;
 	height:100%;
 } 
-
-/*@page {
+@page {
     margin:.5cm
-}*/
-
+}
 p,h2,h3 {
     orphans:3;
     widows:3
 }
-
 h2,h3 {
     page-break-after:avoid
 }
 }
-
-/* Normal Styles  */
+/* BASICS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
     display:block
-}
-
-audio,canvas,video {
-    display:inline;
-    zoom:1px
 }
 html {
   box-sizing: border-box;
@@ -84,13 +66,6 @@ html {
     font-size:100%;
     background:url(../img/bg.jpg);
 }
-
-/*html,input,select,textarea {
-    font-family:sans-serif;
-    color:#222
-}
-*/
-
 body {
     line-height:1.5;
     letter-spacing:-0.05em;
@@ -104,6 +79,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
 }
+main {
+    max-width:1290px;
+    margin:0 auto
+}
 button,
 input,
 optgroup,
@@ -114,73 +93,14 @@ textarea {
 
 img {
   display: inline-block;
-  /*ertical-align: middle;*/
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic; }
 
-caption,th {
-    text-align:left
-}
-
 svg:not(:root) {
     overflow:hidden
 }
-/*
-fieldset {
-    border:0;
-    margin:0;
-    padding:0
-}
-*/
-/*label {
-    cursor:pointer
-}*/
-/*
-legend {
-    border:0;
-    margin-left:-7px;
-    white-space:normal;
-    padding:0
-}
-
-textarea {
-    overflow:auto;
-    vertical-align:top;
-    resize:vertical
-}
-
-input:invalid,textarea:invalid {
-    background-color:#f0dddd
-}
-
-blockquote {
-    font-weight:400;
-    color:#1C65A0;
-    margin:0 30px 8px
-}*/
-
-/*h4 {
-    color:#1C65A0;
-    font-size:22px;
-    font-weight:400;
-    letter-spacing:-1px;
-    line-height:1;
-    -webkit-user-select:none;
-    -webkit-text-shadow:rgba(255,255,255,0.01) 0 0 1px;
-    padding-top:15px;
-    padding-left:15px
-}
-
-h3 {
-    color:#1C65A0;
-    font-size:18px;
-    font-weight:400;
-    letter-spacing:-1px;
-    line-height:1;
-    -webkit-user-select:none;
-    -webkit-text-shadow:rgba(255,255,255,0.01) 0 0 1px
-}*/
 div,
 dl,
 dt,
@@ -203,10 +123,11 @@ td {
   margin: 0;
   padding: 0; }
 
+/* TYPOGRAPHY 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 p {
   margin-bottom: 1rem;
   font-size: inherit;
-  line-height: 1.6;
   text-rendering: optimizeLegibility; 
 }
 .paragraph-big {
@@ -234,9 +155,11 @@ h5,
 h6 {
   font-style: normal;
   font-weight: normal;
+  color:#1C65A0;
   letter-spacing:-0.06em;
   color: inherit;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility; 
+}
 h1 {
   font-size: 1.5rem;
   line-height: 1.4;
@@ -274,18 +197,25 @@ h6 {
   margin-bottom: 0.5rem; }
 
 @media print, screen and (min-width: 40em) {
+
   h1 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    color:#1C65A0; }
   h2 {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color:#1C65A0; }
   h3 {
-    font-size: 1.9375rem; }
+    font-size: 1.9375rem;
+    color:#1C65A0; }
   h4 {
-    font-size: 1.5625rem; }
+    font-size: 1.5625rem; 
+    color:#1C65A0;}
   h5 {
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    color:#1C65A0; }
   h6 {
-    font-size: 1rem; } }
+    font-size: 1rem; 
+    color:#1C65A0;} }
 
 a {
     color:#1C65A0;
@@ -295,6 +225,7 @@ a {
 a:hover,a:active,a:focus {
     color:#fff;
 }
+
 hr {
   clear: both;
   max-width: 62.5rem;
@@ -304,10 +235,11 @@ hr {
   border-right: 0;
   border-bottom: 1px solid #cacaca;
   border-left: 0; }
-main {
-    max-width:1290px;
-    margin:0 auto
-}
+
+
+/* LISTS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 ul,
 ol,
 dl {
@@ -329,12 +261,6 @@ ul ul, ol ul, ul ol, ol ol {
   margin-left: 1.25rem;
   margin-bottom: 0; }
 
-dl {
-  margin-bottom: 1rem; }
-  dl dt {
-    margin-bottom: 0.3rem;
-    font-weight: bold; }
-
 blockquote {
   margin: 0 0 1rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
@@ -350,19 +276,16 @@ cite {
   cite:before {
     content: "— "; }
 
-abbr, abbr[title] {
-  border-bottom: 1px dotted #0a0a0a;
-  cursor: help;
-  text-decoration: none; }
-
-figure {
-  margin: 0; }
 button,input,select,textarea {
-    letter-spacing:-1px;
+    letter-spacing:-0.05em;
 }
-ul.no-bullet, ol.no-bullet {
+ul.no-bullet {
   margin-left: 0;
   list-style: none; }
+
+/* TEXT POSITIONING 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .text-right {
     text-align:right;
 }
@@ -372,70 +295,113 @@ ul.no-bullet, ol.no-bullet {
 .right {
     float:right;
 }
+
+/* BUTTONS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 button,input[type="button"],input[type="reset"],input[type="submit"] {
-    background: #003c77; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#003c77, #00468c); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#003c77, #00468c); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#003c77, #00468c); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#003c77, #00468c); /* Standard syntax */
+    background: #003c77;
+    background: -webkit-linear-gradient(#003c77, #00468c);
+    background: -o-linear-gradient(#003c77, #00468c);
+    background: -moz-linear-gradient(#003c77, #00468c);
+    background: linear-gradient(#003c77, #00468c);
     display:block;
-    float:right;
     color:#d0d0d0;
     font-size:16px;
-    margin:10px;
     border:none;
     padding:10px 15px;
     text-decoration:none;
     cursor:pointer;
-    overflow:visible;
+    box-shadow: 1px 1px 2px #4c4848;
 }
 button[disabled],input[disabled] {
     cursor:default
 }
-input[type="checkbox"],input[type="radio"] {
-    box-sizing:border-box;
-    width:13px;
-    height:13px;
-    padding:0
-}
-input[type="search"] {
-    -webkit-appearance:textfield;
-    -moz-box-sizing:content-box;
-    -webkit-box-sizing:content-box;
-    box-sizing:content-box
-}
-input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance:none
-}
+
 button::-moz-focus-inner,input::-moz-focus-inner {
     border:0;
     padding:0
 }
-
-button.cta {
+button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
+    background: #004f9e;
+    background: -webkit-linear-gradient(#004f9e, #0058b1);
+    background: -o-linear-gradient(#004f9e, #0058b1);
+    background: -moz-linear-gradient(#004f9e, #0058b1);
+    background: linear-gradient(#004f9e, #0058b1);
+}
+button.cta_fp {
     display: inline-block;
     color: #1f1f1f;
     background: #ffc129;
     text-decoration: none;
-    margin-top: 199px;
-    text-align: right;
+    margin: 199px 0 0 15px;
+    float:right;
     font-size: 1.5em;
     font-weight: 400;
     padding: 0.75em 1.5em;
     box-shadow: 1px 2px 5px #7e7e7e;
 }
+button.cta_fp:hover
+{
+  background-color:#ffd229;
+}
+button.cta {
+    display: inline-block;
+    color: #1f1f1f;
+    background: #ffc129;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 0.75em 1.5em;
+    box-shadow: 1px 2px 5px #7e7e7e;
+}
+button.cta:hover,
+{
+  background-color:#ffd229;
+}
 
-/*.clear {
-    overflow:hidden;
-    width:100%
-}*/
-/*.chromeframe {
-    background:#ccc;
-    color:#000;
-    margin:.2em 0;
-    padding:.2em 0
-}*/
+/* FORMS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*:focus {
+  outline: none;
+}
+label {
+  display:inline-block;
+  margin:0.5rem auto 0.25rem;
+  font-weight:bold;
+  margin-right:1em;
+}
+input[type=text], 
+input[type=email], 
+input[type=tel],
+textarea.message {
+  display:block;
+  font-family:inherit;
+  font-size: 100%;
+  line-height: 1.25;
+  color:#3c3c3c;
+  border: 1px solid #666;
+  padding:5px;
+}
+input:focus,
+textarea:focus,
+input:focus:invalid, /* when a field is considered invalid by the browser */
+textarea:focus:invalid{
+  border: 1px solid #db8c34;
+  }
 
+input:required:valid,
+textarea:required:valid { /* when a field is considered valid by the browser */
+    border: 1px solid #5cd053;
+}
+textarea.message,
+textarea.message:focus {
+  min-width:480px;
+  height:175px;
+  }
+
+/* NAVIGATION 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 nav {
     text-align:right;
@@ -450,130 +416,53 @@ nav li {
     padding:10px 0;
     cursor:pointer;
     border:none;
+    border-right: 1px solid #003971;
+}
+nav li:hover {
+    background: #004f9e;
+    background: -webkit-linear-gradient(#004f9e, #0058b1);
+    background: -o-linear-gradient(#004f9e, #0058b1);
+    background: -moz-linear-gradient(#004f9e, #0058b1);
+    background: linear-gradient(#004f9e, #0058b1);
 }
 nav li a {
     color:#d0d0d0;
     padding:10px 15px;
     text-decoration:none;
 }
+
+/* HEADERS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .header_fp {
     background:url(../img/appliances_intro.png) top left no-repeat;
-   /* width:1280px;*/
     height:355px;
-    /*margin:0;*/
 }
 .header_inner {
     background:url(../img/appliances_logo.png) top left no-repeat;
-    /*width:960px;*/
     height:100px
 }
 
-/*.content_inner {
-    float:left;
-    position:relative;
-    left:0;
-    top:0;
-    width:960px
-}*/
+/* COLUMNS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .col_one_third {
     width:33%;
     padding:0.5em;
     display:inline-block;
     vertical-align:top;
+
 }
 .col_one_half {
     width:48%;
     padding:0.5em;
     display:inline-block;
-    /*vertical-align:top;*/
-}
-#col_left p {
-    padding-bottom:22px
+    vertical-align:top;
+
 }
 
-#col_left,#col_center {
-    float:left;
-
-    width:319px;
-    border-right:1px solid lightgray
-}
-
-#col_right {
-    letter-spacing:-1px;
-    float:right;
-    position:relative;
-    left:0;
-    top:0;
-    width:320px;
-    height:250px
-}
-
-#col_wide {
-    letter-spacing:-1px;
-    float:left;
-    position:relative
-}
-
-#col_wide p {
-    padding-left:0
-}
-
-#col_wide img {
-    float:right;
-    padding-right:50px
-}
-
-#inner_col_left {
-    letter-spacing:-1px;
-    float:left;
-    position:relative;
-    left:0;
-    top:0;
-    width:465px;
-    padding:20px 0 15px
-}
-
-#inner_col_left h4 {
-    left:0;
-    top:0;
-    width:465px;
-    padding:5px 0 10px
-}
-
-#inner_col_left p {
-    left:0;
-    top:0;
-    width:465px;
-    padding:3px 0 15px
-}
-
-#inner_col_right {
-    float:right;
-    position:relative;
-    left:0;
-    width:465px;
-    padding:20px 15px 0 0
-}
-
-#inner_col_right h3 {
-    left:0;
-    top:0;
-    width:465px;
-    padding:5px 0 10px
-}
-
-#inner_col_right img {
-    padding:20px 15px 0 10px
-}
-
-#cont_col_right {
-    float:right;
-    position:relative;
-    left:0;
-    top:0;
-    width:465px;
-    padding:65px 15px 0 0
-}
+/* UNORDERED LIST STYLES 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 ul.checkmarks {
     font-size:1.2em;
@@ -593,41 +482,14 @@ flex-direction: column;
 flex-wrap: wrap;
 }
 
-ul#contect_Gainesville {
-    font-size:18px;
-    letter-spacing:-1px
-}
-
-.Gainesville {
-    width:450px
-}
-
-.Gainesville label {
-    color:#1C65A0;
-    font-size:14px;
-    text-align:left;
-    padding:4px
-}
-
-.required_star {
-    color:red
-}
+/* FOOTER 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 footer {
     position:relative;
     color:#666;
     font-size:90%;
-   /* height:6em;*/
 }
-
-/*footer img {
-    vertical-align:bottom
-}*/
-
-/*footer ul {
-    position:absolute;
-    left:200px
-}*/
 
 footer li {
     display:inline-block;
@@ -636,10 +498,7 @@ footer li {
   
 }
 .footer-left-padding {
-   /* float:left;
-    text-align:left;*/
     margin-left:200px;
-    /*padding-top:20px*/
 }
 
 .redwash {
@@ -647,154 +506,6 @@ footer li {
     width:175px;
     bottom:-15px
 }
-
-
-/*#copyright {
-    position:absolute;
-    bottom:0;
-    right:0
-}*/
-
-/*#credit {
-    float:right;
-    padding-top:20px
-}*/
-
-.third,.quarter,.fifth,.sixth {
-    width:100%;
-    padding:10px 0 0 10px
-}
-
-.half li,.third li,.quarter li,.fifth li,.sixth li {
-    float:left
-}
-
-.half li {
-    color:#1C65A0;
-    text-align:center;
-    width:45%;
-    padding:0 5px
-}
-
-.third li {
-    padding-right:5%;
-    width:28.3%
-}
-
-.quarter li {
-    color:#1C65A0;
-    padding-right:5%;
-    width:20%
-}
-
-.fifth li {
-    padding-right:5%;
-    width:15%
-}
-
-.separator {
-    clear:both;
-    float:left;
-    height:1px;
-    width:100%
-}
-
-/*.ir {
-    display:block;
-    border:0;
-    text-indent:-999em;
-    overflow:hidden;
-    background-color:transparent;
-    background-repeat:no-repeat;
-    text-align:left;
-    direction:ltr;
-    line-height:0
-}*/
-
-/*.hidden {
-    display:none!important;
-    visibility:hidden
-}
-*/
-/*.visuallyhidden {
-    border:0;
-    clip:rect(0 0 0 0);
-    height:1px;
-    overflow:hidden;
-    position:absolute;
-    width:1px;
-    margin:-1px;
-    padding:0
-}
-
-.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
-    clip:auto;
-    height:auto;
-    overflow:visible;
-    position:static;
-    width:auto;
-    margin:0
-}
-*/
 .invisible {
     visibility:hidden
-}
-/*
-.clearfix:before,.clearfix:after {
-    content:"";
-    display:table
-}
-
-.clearfix:after {
-    clear:both
-}
-
-.clearfix {
-    zoom:1px
-}*/
-
-/*audio:not([controls]),[hidden],.ir br {
-    display:none
-}*/
-
-/*::-moz-selection,::selection {
-    background:url(../img/bg.jpg);
-    color:#fff;
-    text-shadow:none
-}*/
-
-h1,h2,h3,h4,h5,h6,ul#contact_Gainesville li {
-    color:#1C65A0
-}
-
-figure,form {
-    margin:0
-}
-form{
-    min-height:100%;
-}
-
-/*body:focus,div:focus,fieldset:focus,span:focus,li:focus,p:focus,a:hover,a:active {
-    outline:0
-}*/
-
-/*a.button:hover,a.nav:hover,a.cta:hover {
-    background-position:bottom right;
-    color:#fff
-}
-
-a.button:hover span,a.nav:hover span,a.cta:hover span {
-    background-position:bottom left
-}
-
-a.button:active span,a.nav:active span {
-    padding:11px 0 14px 15px
-}*/
-
-.Gainesville_td,.Gainesville p {
-    padding:4px
-}
-
-.required,.not-required {
-    font-weight:600
 }
