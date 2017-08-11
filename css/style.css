@@ -93,14 +93,14 @@ html {
 
 body {
     line-height:1.5;
-    letter-spacing:-1px;
+    letter-spacing:-0.05em;
     background:url(../img/starsomg.png) top center no-repeat;
     position:relative;
     min-height:90vh;
     margin: 0;
     padding: 0;
-    color:#7e7e7e;
-    font-family:"Segoe UI","Lucida Sans","Trebuchet MS","Verdana Ref","Candara",sans-serif;
+    color:#5d5d5d;
+    font-family:"Segoe UI","Open Sans",sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
 }
@@ -114,7 +114,7 @@ textarea {
 
 img {
   display: inline-block;
-  vertical-align: middle;
+  /*ertical-align: middle;*/
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic; }
@@ -234,6 +234,7 @@ h5,
 h6 {
   font-style: normal;
   font-weight: normal;
+  letter-spacing:-0.06em;
   color: inherit;
   text-rendering: optimizeLegibility; }
 h1 {
@@ -287,7 +288,7 @@ h6 {
     font-size: 1rem; } }
 
 a {
-    color:#1C65A0;-
+    color:#1C65A0;
     text-decoration:none
 }
 
@@ -310,7 +311,7 @@ main {
 ul,
 ol,
 dl {
-  /*margin-bottom: 1rem;*/
+  margin-bottom: 1rem;
   list-style-position: outside;
   line-height: 1.6; }
 
@@ -364,6 +365,9 @@ ul.no-bullet, ol.no-bullet {
   list-style: none; }
 .text-right {
     text-align:right;
+}
+.text-center {
+    text-align:center;
 }
 .right {
     float:right;
@@ -420,12 +424,6 @@ button.cta {
     padding: 0.75em 1.5em;
     box-shadow: 1px 2px 5px #7e7e7e;
 }
-.cta_fp {
-    background:url(../img/appliances_intro.png) top left no-repeat;
-   /* width:1280px;*/
-    height:355px;
-    /*margin:0;*/
-}
 
 /*.clear {
     overflow:hidden;
@@ -458,37 +456,45 @@ nav li a {
     padding:10px 15px;
     text-decoration:none;
 }
+.header_fp {
+    background:url(../img/appliances_intro.png) top left no-repeat;
+   /* width:1280px;*/
+    height:355px;
+    /*margin:0;*/
+}
 .header_inner {
     background:url(../img/appliances_logo.png) top left no-repeat;
-    width:960px;
+    /*width:960px;*/
     height:100px
 }
 
-.content_inner {
+/*.content_inner {
     float:left;
     position:relative;
     left:0;
     top:0;
     width:960px
-}
+}*/
 .col_one_third {
     width:33%;
     padding:0.5em;
     display:inline-block;
     vertical-align:top;
 }
+.col_one_half {
+    width:48%;
+    padding:0.5em;
+    display:inline-block;
+    /*vertical-align:top;*/
+}
 #col_left p {
     padding-bottom:22px
 }
 
 #col_left,#col_center {
-    letter-spacing:-1px;
     float:left;
-    position:relative;
-    left:0;
-    top:0;
+
     width:319px;
-    height:250px;
     border-right:1px solid lightgray
 }
 
@@ -570,7 +576,7 @@ nav li a {
 }
 
 ul.checkmarks {
-    font-size:18px;
+    font-size:1.2em;
 }
 
 ul.checkmarks li {
@@ -580,14 +586,11 @@ ul.checkmarks li {
     margin:5px
 }
 
-#serv_brands {
-    float:right;
-    text-align:center;
-    letter-spacing:-1px;
-    position:relative;
-    left:0;
-    top:0;
-    width:760px
+ul.service_brands {
+height: 100px;
+display:flex;
+flex-direction: column;
+flex-wrap: wrap;
 }
 
 ul#contect_Gainesville {
@@ -613,7 +616,7 @@ ul#contect_Gainesville {
 footer {
     position:relative;
     color:#666;
-    font-size:12px;
+    font-size:90%;
    /* height:6em;*/
 }
 
