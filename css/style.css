@@ -97,8 +97,8 @@ body {
     background:url(../img/starsomg.png) top center no-repeat;
     position:relative;
     min-height:90vh;
-     margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
     color:#7e7e7e;
     font-family:"Segoe UI","Lucida Sans","Trebuchet MS","Verdana Ref","Candara",sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -207,8 +207,12 @@ p {
   margin-bottom: 1rem;
   font-size: inherit;
   line-height: 1.6;
-  text-rendering: optimizeLegibility; }
-
+  text-rendering: optimizeLegibility; 
+}
+.paragraph-big {
+    font-size:114%;
+    line-height:1.4;
+}
 em,
 i {
   font-style: italic;
@@ -288,7 +292,7 @@ a {
 }
 
 a:hover,a:active,a:focus {
-    color:#0162CD
+    color:#fff;
 }
 hr {
   clear: both;
@@ -299,11 +303,14 @@ hr {
   border-right: 0;
   border-bottom: 1px solid #cacaca;
   border-left: 0; }
-
+main {
+    max-width:1290px;
+    margin:0 auto
+}
 ul,
 ol,
 dl {
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
   list-style-position: outside;
   line-height: 1.6; }
 
@@ -355,8 +362,12 @@ button,input,select,textarea {
 ul.no-bullet, ol.no-bullet {
   margin-left: 0;
   list-style: none; }
-
-
+.text-right {
+    text-align:right;
+}
+.right {
+    float:right;
+}
 button,input[type="button"],input[type="reset"],input[type="submit"] {
     background: #003c77; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#003c77, #00468c); /* For Safari 5.1 to 6.0 */
@@ -402,59 +413,65 @@ button.cta {
     color: #1f1f1f;
     background: #ffc129;
     text-decoration: none;
-    margin-top: 243px;
-    text-align:right;
+    margin-top: 199px;
+    text-align: right;
     font-size: 1.5em;
     font-weight: 400;
     padding: 0.75em 1.5em;
+    box-shadow: 1px 2px 5px #7e7e7e;
 }
-.clear {
+.cta_fp {
+    background:url(../img/appliances_intro.png) top left no-repeat;
+   /* width:1280px;*/
+    height:355px;
+    /*margin:0;*/
+}
+
+/*.clear {
     overflow:hidden;
     width:100%
-}
-.chromeframe {
+}*/
+/*.chromeframe {
     background:#ccc;
     color:#000;
     margin:.2em 0;
     padding:.2em 0
+}*/
+
+
+nav {
+    text-align:right;
 }
-main {
-    max-width:1290px;
-    margin:0 auto
-}
-.cta_fp {
-    background:url(../img/appliances_intro.png) top no-repeat;
-    width:1280px;
-    height:335px
-}
-#header_inner {
-    background:url(../img/appliances_logo.png) top left no-repeat;
-    width:960px;
-    height:100px
-}
-a.nav {
+nav li {
     background: #003c77;
     background: -webkit-linear-gradient(#003c77, #00468c);
     background: -o-linear-gradient(#003c77, #00468c);
     background: -moz-linear-gradient(#003c77, #00468c);
     background: linear-gradient(#003c77, #00468c);
-    display:block;
-    float:right;
+    display:inline-block;
+    padding:10px 0;
+    cursor:pointer;
+    border:none;
+}
+nav li a {
     color:#d0d0d0;
-    font-size:16px;
     padding:10px 15px;
-    text-decoration:none
+    text-decoration:none;
+}
+.header_inner {
+    background:url(../img/appliances_logo.png) top left no-repeat;
+    width:960px;
+    height:100px
 }
 
-
-#content_inner {
+.content_inner {
     float:left;
     position:relative;
     left:0;
     top:0;
     width:960px
 }
-.col {
+.col_one_third {
     width:33%;
     padding:0.5em;
     display:inline-block;
@@ -559,6 +576,7 @@ ul.checkmarks {
 ul.checkmarks li {
     background:url(../img/mark.png) left no-repeat;
     padding-left:35px;
+    list-style-type: none;
     margin:5px
 }
 
@@ -596,26 +614,25 @@ footer {
     position:relative;
     color:#666;
     font-size:12px;
-    height:6em;
+   /* height:6em;*/
 }
 
-footer img {
+/*footer img {
     vertical-align:bottom
-}
+}*/
 
-footer ul {
+/*footer ul {
     position:absolute;
-
     left:200px
-}
+}*/
 
 footer li {
-    display:inline;
+    display:inline-block;
     padding-right:5px;
     padding-left:5px;
-    width:640px
+  
 }
-#numbers {
+.footer-left-padding {
    /* float:left;
     text-align:left;*/
     margin-left:200px;
@@ -629,16 +646,16 @@ footer li {
 }
 
 
-#copyright {
+/*#copyright {
     position:absolute;
     bottom:0;
     right:0
-}
+}*/
 
-#credit {
+/*#credit {
     float:right;
     padding-top:20px
-}
+}*/
 
 .third,.quarter,.fifth,.sixth {
     width:100%;
@@ -679,7 +696,7 @@ footer li {
     width:100%
 }
 
-.ir {
+/*.ir {
     display:block;
     border:0;
     text-indent:-999em;
@@ -689,14 +706,14 @@ footer li {
     text-align:left;
     direction:ltr;
     line-height:0
-}
+}*/
 
-.hidden {
+/*.hidden {
     display:none!important;
     visibility:hidden
 }
-
-.visuallyhidden {
+*/
+/*.visuallyhidden {
     border:0;
     clip:rect(0 0 0 0);
     height:1px;
@@ -715,11 +732,11 @@ footer li {
     width:auto;
     margin:0
 }
-
+*/
 .invisible {
     visibility:hidden
 }
-
+/*
 .clearfix:before,.clearfix:after {
     content:"";
     display:table
@@ -731,17 +748,17 @@ footer li {
 
 .clearfix {
     zoom:1px
-}
+}*/
 
-audio:not([controls]),[hidden],.ir br {
+/*audio:not([controls]),[hidden],.ir br {
     display:none
-}
+}*/
 
-::-moz-selection,::selection {
+/*::-moz-selection,::selection {
     background:url(../img/bg.jpg);
     color:#fff;
     text-shadow:none
-}
+}*/
 
 h1,h2,h3,h4,h5,h6,ul#contact_Gainesville li {
     color:#1C65A0
@@ -754,11 +771,11 @@ form{
     min-height:100%;
 }
 
-body:focus,div:focus,fieldset:focus,span:focus,li:focus,p:focus,a:hover,a:active {
+/*body:focus,div:focus,fieldset:focus,span:focus,li:focus,p:focus,a:hover,a:active {
     outline:0
-}
+}*/
 
-a.button:hover,a.nav:hover,a.cta:hover {
+/*a.button:hover,a.nav:hover,a.cta:hover {
     background-position:bottom right;
     color:#fff
 }
@@ -769,7 +786,7 @@ a.button:hover span,a.nav:hover span,a.cta:hover span {
 
 a.button:active span,a.nav:active span {
     padding:11px 0 14px 15px
-}
+}*/
 
 .Gainesville_td,.Gainesville p {
     padding:4px
