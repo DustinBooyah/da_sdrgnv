@@ -67,7 +67,6 @@ body {
     letter-spacing: -0.05em;
     background: url(../img/starsomg.png) top center no-repeat;
     position: relative;
-    min-height: 90vh;
     margin: 0;
     padding: 0;
     color: #5d5d5d;
@@ -77,7 +76,10 @@ body {
 }
 main {
     max-width: 1290px;
-    margin: 0 auto
+    margin: 0 auto;
+}
+section {
+    min-height:50vh;
 }
 button, input, optgroup, select, textarea {
     font-family: inherit;
@@ -124,7 +126,7 @@ small {
 h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: normal;
-    color: #1C65A0;
+    color: #00468c;
     letter-spacing: -0.06em;
     color: inherit;
     text-rendering: optimizeLegibility;
@@ -168,27 +170,27 @@ h6 {
 @media print, screen and (min-width: 40em) {
     h1 {
         font-size: 3rem;
-        color: #1C65A0;
+        color: #00468c;
     }
     h2 {
         font-size: 2.5rem;
-        color: #1C65A0;
+        color: #00468c;
     }
     h3 {
         font-size: 1.9375rem;
-        color: #1C65A0;
+        color: #00468c;
     }
     h4 {
         font-size: 1.5625rem;
-        color: #1C65A0;
+        color: #00468c;
     }
     h5 {
         font-size: 1.25rem;
-        color: #1C65A0;
+        color: #00468c;
     }
     h6 {
         font-size: 1rem;
-        color: #1C65A0;
+        color: #00468c;
     }
 }
 a {
@@ -196,7 +198,7 @@ a {
     text-decoration: none
 }
 a:hover, a:active, a:focus {
-    color: #fff;
+    color: #329aef;
 }
 hr {
     clear: both;
@@ -223,13 +225,6 @@ li {
 ul {
     margin-left: 1.25rem;
     list-style-type: disc;
-}
-ol {
-    margin-left: 1.25rem;
-}
-ul ul, ol ul, ul ol, ol ol {
-    margin-left: 1.25rem;
-    margin-bottom: 0;
 }
 blockquote {
     margin: 0 0 1rem;
@@ -282,13 +277,13 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     background: -moz-linear-gradient(#003c77, #00468c);
     background: linear-gradient(#003c77, #00468c);
     display: block;
-    color: #d0d0d0;
-    font-size: 16px;
+    color: #e2e2e2;
+    font-size: 1.25em;
     border: none;
-    padding: 10px 15px;
     text-decoration: none;
     cursor: pointer;
     box-shadow: 1px 1px 2px #4c4848;
+    margin-top:1.25em;
 }
 button[disabled], input[disabled] {
     cursor: default
@@ -304,22 +299,35 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
     background: -moz-linear-gradient(#004f9e, #0058b1);
     background: linear-gradient(#004f9e, #0058b1);
 }
+button a {
+color:#e2e2e2;
+padding: 1em;
+line-height:2;
+}
+button a:hover {
+color:#fff;
+}
 button.cta_fp {
     display: inline-block;
     color: #1f1f1f;
     background: #ffc129;
     text-decoration: none;
-    margin: 199px 0 0 15px;
+    margin: 235px 0 0 15px;
     float: right;
-    font-size: 1.5em;
-    font-weight: 400;
-    padding: 0.75em 1.5em;
+    font-size: 1.75em;
+    font-weight: 600; 
     box-shadow: 1px 2px 5px #7e7e7e;
 }
 button.cta_fp:hover {
     background-color: #ffd229;
 }
-button.cta {
+button.cta_fp a {
+    color: #1f1f1f;
+}
+button.cta_fp a:hover {
+    color: #633a0c;
+}
+/*button.cta {
     display: inline-block;
     color: #1f1f1f;
     background: #ffc129;
@@ -331,7 +339,7 @@ button.cta {
 }
 button.cta:hover, {
     background-color: #ffd229;
-}
+}*/
 
 /* FORMS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -374,6 +382,7 @@ textarea.message, textarea.message:focus {
 
 nav {
     text-align: right;
+    font-size:1.1em;
 }
 nav li {
     background: #003c77;
@@ -395,22 +404,53 @@ nav li:hover {
     background: linear-gradient(#004f9e, #0058b1);
 }
 nav li a {
-    color: #d0d0d0;
+    color: #e2e2e2;
     padding: 10px 15px;
     text-decoration: none;
+}
+nav li a:hover {
+    color: #fff;
+
 }
 
 /* HEADERS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .header_fp {
-    background: url(../img/appliances_intro.png) top left no-repeat;
-    height: 355px;
+    background: url(../img/appliances_intro.png) left no-repeat;
+    height: 400px;
 }
 .header_inner {
     background: url(../img/appliances_logo.png) top left no-repeat;
     height: 100px
 }
+.header-number {
+    font-size: 1.8em;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: #3674b1;
+}
+
+/* TITLE 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #0c4c8e;
+    float: left;
+    letter-spacing: -0.07em;
+    line-height: 1;
+}
+
+.title_subheader {
+    font-size: 1.8em;
+    color: #5d5d5d;
+    letter-spacing: -0.06em;
+    margin-top: 46px;
+    float: left;
+    font-weight: 400;
+    }
+
 
 /* COLUMNS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -453,7 +493,8 @@ ul.service_brands {
 footer {
     position: relative;
     color: #666;
-    font-size: 90%;
+    font-size: 0.9em;
+    font-weight:500;
 }
 footer li {
     display: inline-block;
@@ -463,7 +504,7 @@ footer li {
 .footer-left-padding {
     margin-left: 200px;
 }
-.redwash {
+.footer-graphic {
     position: absolute;
     width: 175px;
     bottom: -15px;
