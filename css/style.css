@@ -78,9 +78,9 @@ main {
     max-width: 1290px;
     margin: 0 auto;
 }
-section {
+/*section {
     min-height:50vh;
-}
+}*/
 button, input, optgroup, select, textarea {
     font-family: inherit;
 }
@@ -266,7 +266,18 @@ ul.no-bullet {
 .left {
     float:left;
 }
-
+.centered {
+    margin:0 auto;
+}
+img.centered {
+    display:block;
+    margin: 2.5em auto;
+}
+/* TEXT COLORS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.text-grey {
+    color:#5d5d5d;
+}
 /* BUTTONS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -283,7 +294,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     text-decoration: none;
     cursor: pointer;
     box-shadow: 1px 1px 2px #4c4848;
-    margin-top:1.25em;
+    margin-top:1.75em;
 }
 button[disabled], input[disabled] {
     cursor: default
@@ -307,6 +318,8 @@ line-height:2;
 button a:hover {
 color:#fff;
 }
+/* CALLS TO ACTION and FRONT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 button.cta_fp {
     display: inline-block;
     color: #1f1f1f;
@@ -340,6 +353,9 @@ button.cta_fp a:hover {
 button.cta:hover, {
     background-color: #ffd229;
 }*/
+.fp {
+    margin-top:2rem;
+}
 
 /* FORMS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -417,8 +433,8 @@ nav li a:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .header_fp {
-    background: url(../img/appliances_intro.png) left no-repeat;
-    height: 400px;
+    background: url(../img/appliances_intro.png) bottom center no-repeat;
+    height: 395px;
 }
 .header_inner {
     background: url(../img/appliances_logo.png) top left no-repeat;
@@ -438,7 +454,7 @@ nav li a:hover {
     font-weight: 300;
     color: #0c4c8e;
     float: left;
-    letter-spacing: -0.07em;
+    letter-spacing: -0.08em;
     line-height: 1;
 }
 
