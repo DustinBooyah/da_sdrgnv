@@ -30,7 +30,7 @@
 <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 <script src="js/vendor/modernizr-2.5.3.min.js"></script>
-<script src="js/free_validation.js"></script>
+<script src="js/validation.js"></script>
 </head>
 <body>
 <main>
@@ -54,25 +54,36 @@
 		<div class="col_one_half">
 		
 			
-			<form name="contactformfree" method="post" action="free_process.php" onsubmit="return validate.check(this)">
-		
-					<p>Enter the detailed problem along with your contact information and receive a call back within the hour.</p>
-						
-					<label for="Full_Name" class="required">Full Name
-					<input type="text" name="Full_Name" id="Full_Name" maxlength="80" class="full_name"></label>
-			
-					<label for="Email_Address" class="required">Email Address
-					<input type="email" name="Email_Address" id="Email_Address" maxlength="100" class="email"></label>
-		
-					<label for="Telephone_Number" class="required">Phone Number
-					<input type="tel" name="Telephone_Number" id="Telephone_Number" maxlength="80" class="telephone"></label>
-
-					<label for="Your_Message" class="required">Message
-					<textarea name="Your_Message" id="Your_Message" maxlength="1000" class="message"></textarea></label>
-					
-					<input type="submit" value="Submit">
-	
-			</form>
+			<form action="form_process.php" id="contactform" method="post" name="contactform" onsubmit="return validate.check(this)">
+							<table width="5em">
+								<tr>
+									<td colspan="2">
+										<p>Enter the detailed problem along with your contact information and receive a call back within the hour.</p>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top"><label class="required" for="Full_Name">Name</label></td>
+									<td valign="top"><input id="Full_Name" maxlength="80" name="Full_Name" style="width:300px" type="text"></td>
+								</tr>
+								<tr>
+									<td valign="top"><label class="required" for="Email_Address">Email</label></td>
+									<td valign="top"><input id="Email_Address" maxlength="100" name="Email_Address" style="width:300px" type="email"></td>
+								</tr>
+								<tr>
+									<td valign="top"><label class="required" for="Telephone_Number">Phone #</label></td>
+									<td valign="top"><input id="Telephone_Number" maxlength="80" name="Telephone_Number" style="width:300px" type="tel"></td>
+								</tr>
+								<tr>
+									<td valign="top"><label class="required" for="Your_Message">Message</label></td>
+									<td valign="top">
+									<textarea id="Your_Message" maxlength="1000" name="Your_Message" style="width:300px;height:120px"></textarea></td>
+								</tr>
+								<tr>
+									<td><input type="submit" class="right" value="Submit">
+									</td>
+								</tr>
+							</table>
+						</form>
 		
 		</div>
 		<div class="col_one_half">

@@ -273,11 +273,13 @@ img.centered {
     display:block;
     margin: 2.5em auto;
 }
+
 /* TEXT COLORS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .text-grey {
     color:#5d5d5d;
 }
+
 /* BUTTONS 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -441,7 +443,7 @@ nav li a:hover {
     height: 100px
 }
 .header-number {
-    font-size: 1.8em;
+    font-size: 1.6em;
     letter-spacing: -0.05em;
     line-height: 1;
     color: #3674b1;
