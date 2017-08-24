@@ -76,11 +76,10 @@ body {
 }
 main {
     max-width: 1290px;
+    display:block;
     margin: 0 auto;
 }
-/*section {
-    min-height:50vh;
-}*/
+
 button, input, optgroup, select, textarea {
     font-family: inherit;
 }
