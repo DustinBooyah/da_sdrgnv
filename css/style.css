@@ -2,7 +2,7 @@
 
 
 /* PRINT STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 @media print {
     * {
@@ -46,7 +46,7 @@
 }
 
 /* BASICS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 footer, header, nav, section {
     display: block;
@@ -99,7 +99,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 }
 
 /* TYPOGRAPHY 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 p {
     margin-bottom: 1rem;
@@ -166,7 +166,7 @@ hr {
 }
 
 /* LISTS 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 ul, ol, dl {
     margin-bottom: 1rem;
@@ -206,7 +206,7 @@ ul.no-bullet {
 }
 
 /* TEXT POSITIONING 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 .text-right {
     text-align: right;
@@ -229,13 +229,13 @@ img.centered {
 }
 
 /* TEXT COLORS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 .text-grey {
     color:#5d5d5d;
 }
 
 /* BUTTONS 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 .button, button, input[type=submit]  {
     background: #003c77;
@@ -280,7 +280,7 @@ a:focus.button{
     }
 }
 /* CALLS TO ACTION and FRONT PAGE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 .button.cta_fp {
     /*display: block;*/
     color: #1f1f1f;
@@ -307,7 +307,7 @@ a:focus.button.cta_fp {
 }
 @media only screen and (min-width: 50em) {
     .button.cta_fp {
-        display: inline-block;
+        /* display: inline-block; */
         margin: 235px 0 0 15px;
         float: right;
     }
@@ -315,11 +315,45 @@ a:focus.button.cta_fp {
         margin-top:2em;
     }
 }
-/* FORMS 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ACCESSIBILITY
+-------------------------------------------------- */
 
-*:focus {
+.skip-nav {
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    background: #003c77;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: top 0.1s;
+}
+.skip-nav:focus {
+    top: 0;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* FORMS
+-------------------------------------------------- */
+
+*:focus:not(:focus-visible) {
     outline: none;
+}
+*:focus-visible {
+    outline: 2px solid #1C65A0;
+    outline-offset: 2px;
 }
 .form-group {
     margin-bottom: 1rem;
@@ -356,7 +390,7 @@ input:valid, textarea:valid {
 }
 
 /* NAVIGATION 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 nav {
     font-size:1em;
@@ -392,7 +426,7 @@ nav li a:hover {
     }
 }
 /* HEADERS 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 .header_fp {
         background: url(../img/appliances_intro.png) bottom center no-repeat;
         background-size:contain;
@@ -420,7 +454,7 @@ nav li a:hover {
     }
 }
 /* TITLE 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 .title {
     font-size: 3em;
     font-weight: 500;
@@ -459,7 +493,7 @@ nav li a:hover {
     }
 }
 /* COLUMNS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 .col_one_third {
     width: 100%;
 }
@@ -479,7 +513,7 @@ nav li a:hover {
     }
 }
 /* UNORDERED LIST STYLES 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 ul.checkmarks {
     font-size: 1.2em;
@@ -505,7 +539,7 @@ ul.service_brands_small {
 
 
 /* FOOTER 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 
 footer {
     position: relative;
@@ -529,7 +563,7 @@ footer li {
 
 
  /* MOBILE ONLY
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
  @media print, screen and (max-width: 50em){
     .hide-for-small-only {
         display:none;
@@ -545,7 +579,7 @@ footer li {
     }
 }
  /* DESKTOP ONLY
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 @media only screen and (min-width: 50em) {
     .hide-for-small-only {
         display:inherit;
@@ -556,7 +590,7 @@ footer li {
 
 }
 /* SMALL DESKTOP 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 @media only screen and (min-width: 50em) and (max-width: 64.0625em) {
     html {
         font-size: 0.8em;
@@ -564,7 +598,7 @@ footer li {
 
 }
 /* LARGE DESKTOP 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 @media only screen and (min-width: 90.0625em) {
     html {
         font-size: 1.2em;
@@ -572,7 +606,7 @@ footer li {
 }
 
 /* ULTRAWIDE / 4k DESKTOP 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+-------------------------------------------------- */
 @media only screen and (min-width: 120.0625em) and (max-width: 6249999.9375em) {
     html {
         font-size: 1.4em;
